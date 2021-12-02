@@ -1,0 +1,166 @@
+body{
+  background-color: $bg;
+}
+
+main{
+  display: flex;
+  //background-color: #6622CC;
+}
+
+
+//! ORGANISATION
+
+.conteneur_gauche{
+  @media (min-width: 800px) {
+    margin-left: 2em;
+  }
+}
+.conteneur_droit{
+  margin-top: 1em;
+  margin-inline: 2em;
+  //padding-block-start: 1em;
+  flex: 1;
+  //background-color: $accent2;
+  border-radius: 15px;
+  height: max-content;
+}
+
+.titre{
+  padding: 2em;
+  background-color: $accent2;
+  border-radius: 15px;
+}
+
+// CONTROLE DES CONTENEURS AYANT UN ÉLÉMENT DEVANT ETRE POSSITIONNÉ À LEUR DROITE
+
+.etiquette{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  :first-child{
+    padding-right: 1em;
+  }
+}
+
+// CONTROLE DES SECTIONS
+
+section{
+  background-color: $accent2;
+  padding: 2em;
+  border-radius: 15px;
+  margin-block-start: 2em;
+  width: 100%;
+}
+
+// CONTROLE DES LISTES (LISTE DES LISTES & LISTE DES ITEMS)
+
+.liste{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-rows: max-content max-content;
+  gap: 1em;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+
+  //@media (min-width: 800px) {
+  //  margin-inline: auto;
+  //  max-width: 800px;
+  //}
+
+  &--bulle{
+    background-color: $accent1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    //margin: 1em;
+    padding: 1em;
+    border-radius: 15px;
+    h3{
+      padding: 0;
+      margin: 0;
+    }
+    &--content-top{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    &--content-bottom{
+
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+    }
+
+
+
+  }
+
+}
+
+
+// CONTROLE DES SELECTEURS ET INPUTS
+
+// Inputs fields
+
+input{
+  padding-block: .5em;
+  padding-inline: .5em;
+  border: .5em solid $accent1;
+  background-color: $accent1;
+  border-radius: 15px;
+  &:focus, :active{
+    outline-color: $primary;
+    background-color: $text;
+    color: black;
+  }
+}
+
+.input_text{
+  margin-block: 1em;
+
+  //padding-block: 1em;
+  //padding-inline: .5em;
+  //margin-block: 1em;
+  //border: none;
+  width: 100%;
+  //background-color: $accent1;
+  //border-radius: 15px;
+
+
+}
+
+//Selects
+
+.select{
+  margin-block: 1em;
+  padding: .5em;
+  border: .5em solid $accent1;
+  background-color: $accent1;
+  border-radius: 15px;
+}
+
+//Form Assets
+
+fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-block: 1em;
+
+}
+
+
+label{
+  margin-right: 1em;
+}
+
+
+

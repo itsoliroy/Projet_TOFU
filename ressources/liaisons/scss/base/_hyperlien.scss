@@ -1,0 +1,18 @@
+/**
+* @author Prenom Nom courriel
+* @todo Compléter selon l'énoncé de l'exercice
+*/
+
+a, .a {
+  color: $text;
+  text-decoration: none;
+  &:visited {
+  }
+  &:hover {
+    color: $secondary;
+  }
+  &:active {
+    color: $secondary;
+    text-decoration: underline;
+  }
+}

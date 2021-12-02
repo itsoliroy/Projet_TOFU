@@ -1,0 +1,55 @@
+.couleur{
+  min-width: 3rem;
+  min-height: 3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.couleurs {
+  list-style-type: none;
+  //padding: 2em;
+  //margin: 2em;
+  position: relative;
+  &__item {
+    display: inline-block;
+    input {
+      display: none;
+      &:checked {
+        & + .couleurs__pastille {
+          border: .5em solid;
+          border-color: $secondary;
+          border-radius: 50%;
+        }
+      }
+      &:hover {
+
+        & + .couleurs__pastille {
+          &:after {
+            content: attr(data-couleur);
+            position: absolute;
+            top: -2em;
+            left: 2em;
+          }
+        }
+      }
+    }
+  }
+  &__pastille {
+    display: block;
+    border: .5em solid;
+    border-color: $accent1;
+    border-radius: 50%;
+    &:hover{
+      border: .5em solid;
+      border-color: $secondary;
+      border-radius: 50%;
+    }
+  }
+}
+
+.echeance-couleur{
+display: flex;
+  justify-content: flex-end;
+}

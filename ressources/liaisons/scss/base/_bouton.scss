@@ -1,0 +1,73 @@
+/**
+* @author Prenom Nom courriel
+* @todo Compléter selon l'énoncé de l'exercice
+*/
+
+
+button{
+  border: none ;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.btn {
+  background-color: $primary;
+  border-radius: 18px;
+  color: $text;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: 250ms;
+
+
+  &:after {
+    //content: "»";
+    //margin-left: 0.4em;
+  }
+  &:hover {
+    background-color: $secondary;
+    color: $text;
+
+  }
+
+  &:active {
+  }
+
+  &--danger {
+    &:hover{
+      background-color: red;
+    }
+  }
+  &--inverse {
+    background-color: $primary50;
+    border: .2em solid $accent2;
+    &:hover {
+      //border-color: transparentize($accent1, 0.25);
+      border: .2em solid $primary;
+
+    }
+    &:active {
+      //border-color: transparentize($accent1, 0.5);
+      border: .2em solid $primary;
+
+    }
+  }
+}
+
+.btn-menu{
+  width: 100%;
+  padding: 2em;
+  background-color: $accent1;
+  border-radius: 15px;
+}
+
+
+#btn-nav{
+
+  background-color: $primary;
+  margin-inline: auto;
+  //&:hover{
+   //   background-color: $primary50;
+   //  color: white;
+   // }
+  }

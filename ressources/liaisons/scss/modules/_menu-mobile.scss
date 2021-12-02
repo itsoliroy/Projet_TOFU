@@ -1,0 +1,158 @@
+
+@include border-box-sizing;
+
+.barreOnglets {
+  &__onglets {
+    padding: 0;
+  }
+  &__controle {
+    //border: 1px solid gray;
+    display: inline-block;
+
+  }
+  &__bloc {
+    //background-color: white;
+    //border: 1px solid gray;
+
+  }
+  // Ces styles s'appliquent seulement si JS est activé
+  .js & {
+    &__onglet {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      &--invisible {
+        .barreOnglets__controle {
+          //background-color: lightgray;
+        }
+        .barreOnglets__bloc {
+          display: none;
+        }
+      }
+    }
+    &__bloc {
+      //position: absolute;
+      //top: 0;
+      //right: 4em;
+      width: max-content;
+      height: max-content;
+    }
+    &--bureau {
+      display: none;
+      @media (min-width: 800px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.menu {
+  //background-color: lightblue;
+  //border: 1px solid blue;
+  background-color: $accent2;
+  width: 100%;
+  margin: 0;
+  border-radius: 15px;
+  margin-block: 1em;
+  padding: 2em;
+
+  &__sections {
+  padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: max-content;
+
+  }
+  &__section {
+    //border-top: 1px solid black;
+    //margin-inline: 2em;
+    margin-block: 2em;
+    padding: 0;
+    list-style-type: none;
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+    }
+  li{
+    list-style-type: none;
+    padding: 1em;
+    margin: 0;
+    margin-block: .5em;
+    width: 100%;
+    border-radius: 15px;
+    background-color: $accent1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      margin-right: 1em;
+    }
+  }
+  }
+  &--mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &--bureau {
+    display: none;
+    width: 100%;
+    padding-inline: 2em;
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+    }
+
+    li{
+      background-color: $accent1;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+
+
+      a{
+        margin-right: 1em;
+        height: 100%;
+        width: 100%;
+        display: block;
+
+      }
+    }
+  }
+  .js & {
+    &--ferme {
+      .menu__sections {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 800px) {
+    &--mobile {
+      display: none;
+    }
+    &--bureau {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+
+.optionEcheance {
+  &__controlePoignee {
+    .icone{
+      width:1em;
+      height:1em;
+    }
+  }
+  .js & {
+    &__bloc {
+      legend {
+        display: none;
+      }
+    }
+    &--is-collapsed {
+      margin-block: 1.5em;
+      .optionEcheance__bloc {
+        display: none;
+      }
+    }
+  }
+}

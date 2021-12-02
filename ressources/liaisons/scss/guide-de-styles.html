@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Guide de styles</title>
+  <link rel="stylesheet" href="../../../public/liaisons/css/styles.css">
+</head>
+<body id="gds" class="gds">
+  <h1 class="gds__titre">Guide de styles</h1>
+
+  <section>
+
+    <h2 class="gds__sousTitre">Couleurs</h2>
+
+    <ul class="palette">
+      <li class="palette__item">
+        <div class="palette__couleur palette__couleur--primary"></div>
+        <p class="palette__description"><code>$bleuMoyen</code> <br>#358AE0</p>
+      </li>
+      <li class="palette__item">
+        <div class="palette__couleur palette__couleur--secondary"></div>
+        <p class="palette__description"><code>$bleuPale</code> <br>#68A8E8</p>
+      </li>
+      <li class="palette__item">
+        <div class="palette__couleur palette__couleur--accent1"></div>
+        <p class="palette__description"><code>$vertLime</code> <br>#BBD531</p>
+      </li>
+      <li class="palette__item">
+        <div class="palette__couleur palette__couleur--accent2"></div>
+        <p class="palette__description"><code>$bleuMinuit</code> <br>#012D61</p>
+      </li>
+      <li class="palette__item">
+        <div class="palette__couleur palette__couleur--accent3"></div>
+        <p class="palette__description"><code>$bleuMarin</code> <br>#2678B5</p>
+      </li>
+    </ul>
+
+
+    <table class="gds__tableau">
+      <thead>
+      <tr>
+        <th><h2 class="gds__sousTitre">Textes - Desktop</h2></th>
+        <th><h2 class="gds__sousTitre">Textes - Mobile</h2></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <p class="titreNiveau1 titreNiveau1--desktop">Titre niveau 1</p>
+          <p>
+            <small>Futura medium, 48pts sur écran large</small>
+            <br><small>Rectangle de 150px x 8px, couleur $bleuMoyen</small>
+          </p>
+        </td>
+        <td>
+          <p class="titreNiveau1 titreNiveau1--mobile">Titre niveau 1</p>
+          <p>
+            <small>Futura medium, 28 pts sur écran étroit</small>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="titreNiveau2 titreNiveau2--desktop">Titre niveau 2</p>
+          <p>
+            <small>Futura medium, 28pts sur écran large, en capitales</small>
+          </p></td>
+        <td>
+          <p class="titreNiveau2 titreNiveau2--mobile">Titre niveau 2</p>
+          <p>
+            <small>Futura medium, 18 pts sur écran étroit, en capitales</small>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="titreNiveau3 titreNiveau3--desktop">Titre niveau 3</p>
+          <p>
+            <small>Futura medium, 22pts sur écran large</small>
+          </p>
+        </td>
+        <td>
+          <p class="titreNiveau3 titreNiveau3--mobile">Titre niveau 3</p>
+          <p>
+            <small>Futura medium, 18 pts sur écran étroit</small>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="texte texte--desktop">Texte courant lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis dolores enim eveniet id inventore laborum modi nam necessitatibus officia, perspiciatis quasi sint soluta, suscipit voluptates? Esse ex harum incidunt.</p>
+          <p><small>(Arial, 16pts avec interlignage de 24 pts)</small></p>
+        </td>
+        <td>
+          <p class="texte texte--mobile">Texte courant lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis dolores enim eveniet id inventore laborum modi nam necessitatibus officia, perspiciatis quasi sint soluta, suscipit voluptates? Esse ex harum incidunt.</p>
+          <p><small>(Arial, 16pts avec interlignage de 22 pts)</small></p>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+
+    <h2 class="gds__sousTitre">Boutons / Éléments interactifs</h2>
+
+    <h3 class="gds__categorie">Hyperliens de base (pas de classe)</h3>
+
+    <ul class="listeInteractivite">
+      <li class="listeInteractivite__item">
+        <p><a class="hyperlien"  href="#">a:link</a></p>
+        <p>Couleur $hyperlien <br>(équivalente à $bleuMarin)</p>
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a class="hyperlien hyperlien--visited"  href="#">a:visited</a></p>
+        <p>Couleur $hyperlien plus foncée de 5%</p>
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a class="hyperlien hyperlien--hover"  href="#">a:hover</a></p>
+        <p>Couleur $hyperlien plus pâle de 20% <br>Souligné</p>
+
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a class="hyperlien hyperlien--active"  href="#">a:active</a></p>
+        <p>Couleur $vertLime <br>Souligné</p>
+      </li>
+    </ul>
+
+    <h3 class="gds__categorie">Boutons</h3>
+
+    <ul class="listeInteractivite">
+      <li class="listeInteractivite__item">
+        <p><a href="#" class="bouton">Bouton</a></p>
+        <p>État de base</p>
+        <p>Couleur $vertLime, <code>border-radius</code> de 18px</p>
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a href="#" class="bouton bouton--hover">Bouton</a></p>
+        <p>État survol</p>
+        <p>Couleur $vertLime, transparence à 25%</p>
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a href="#" class="bouton bouton--active">Bouton</a></p>
+        <p>État actif</p>
+        <p>Couleur $vertLime, transparence à 50%</p>
+      </li>
+    </ul>
+
+    <ul class="listeInteractivite">
+      <li class="listeInteractivite__item">
+        <p><a href="#" class="bouton bouton--inverse">Bouton</a></p>
+        <p>Inversé, état de base</p>
+        <p>Bordure $vertLime</p>
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a href="#" class="bouton bouton--inverse bouton--inverse--hover">Bouton</a></p>
+        <p>Inversé, état survol</p>
+        <p>Bordure 2px $vertLime, transparence à 25%</p>
+      </li>
+      <li class="listeInteractivite__item">
+        <p><a href="#" class="bouton bouton--inverse bouton--inverse--active">Bouton</a></p>
+        <p>Inversé, état actif</p>
+        <p>Bordure 2px $vertLime, transparence à 50%</p>
+      </li>
+    </ul>
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+.barreOnglets {
+  transition: 300ms;
+  &__onglets {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //margin-inline: 1em;
+
+
+  }
+  &__onglet {
+    &--menuMobile {
+      @media (min-width: 800px){
+        display: none !important;
+      }
+    }
+    padding-left: 1em;
+    //text-align: center;
+  }
+  &__controle {
+    //border: 1px solid gray;
+    display: inline-block;
+    //padding: 0.5em 1em;
+    //background-color: red;
+    padding-block: 1em;
+    padding-left: 1em;
+
+
+  }
+  &__bloc {
+    //background-color: $accent1;
+    //border-radius: 15px;
+    //border: 1px solid gray;
+    padding: .2em;
+
+  }
+  // Ces styles s'appliquent seulement si JS est activé
+  .js & {
+    &__onglet {
+      display: inline-block;
+      list-style-type: none;
+      &--invisible {
+        .barreOnglets__controle {
+          //background-color: lightgray;
+        }
+        .barreOnglets__bloc {
+          display: none;
+        }
+      }
+    }
+    &__bloc {
+      //position: absolute;
+      //top: 100%;
+      //left: 0;
+      //width: 100%;
+    }
+  }
+}
+
+.menu {
+  //background-color: lightblue;
+  //border: 1px solid blue;
+  //padding: 0.5em 1em;
+  &--bureau {
+    display: none;
+  }
+  @media (min-width: 800px) {
+    &--bureau {
+      display: block;
+    }
+  }
+}

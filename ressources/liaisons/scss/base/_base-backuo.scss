@@ -1,0 +1,352 @@
+body{
+  background-color: $bg;
+  color:$text;
+}
+.container{
+  max-width: 1200px;
+  margin-inline: auto ;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    li{
+      text-decoration: none;
+      list-style-type: none;
+      margin-left: 2em;
+    }
+  }
+}
+
+
+
+li{
+  list-style-type: none;
+}
+main{
+  .conteneur_droit{
+    grid-area: a;
+  }
+  .conteneur_gauche{
+    grid-area: b;
+    margin-top: 2em;
+    width: max-content;
+    background-color: $accent2;
+    border-radius: 15px;
+    aside{
+
+    }
+  }
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2em;
+  grid-template-areas:
+          "b"
+          "a";
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2em;
+    grid-template-areas:
+          "b a a a";
+  }
+
+  //
+  //h1{
+  //  margin-top: 1.5em;
+  //
+  //  margin-left: 1em;
+  //}
+}
+
+.m-l{
+  margin-left: 2em;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.listeListes{
+  padding: 2em;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content;
+  gap: 2em 2em;
+  grid-template-areas:
+    "."
+
+
+;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". . . ."
+;
+  }
+
+  &::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: $accent2;
+    border-radius: 15px;
+  }
+
+  li{
+
+
+      width: 100%;
+      height: 100%;
+      background-color: $accent1;
+      list-style-type: none;
+      border-radius: 15px;
+    border: .2em solid $accent1;
+    transition: 250ms;
+
+
+    .bulle{
+      padding: 1em;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      //background-color: red;
+      h3, p{
+         margin: 0;
+
+      }
+      p{
+        margin-block: .5em ;
+      }
+
+    }
+
+    &:hover{
+      border: .2em solid $primary50;
+      border-radius: 15px;    }
+  }
+}
+
+
+.etiquette {
+  //margin-inline: 2em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2em;
+  align-items: center;
+}
+
+section{
+  background-color: $accent2;
+  border-radius: 15px;
+  margin-block: 2em;
+  width: 100%;
+
+  .etiquette {
+    margin-inline: 2em;
+
+  }
+  .etiquette-bottom {
+    margin-inline: 2em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+    align-items: center;
+  }
+}
+
+// Écheance -- echeance
+
+.echeance{
+
+  padding: 2em;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content;
+  gap: 2em 2em;
+  grid-template-areas:
+    "."
+
+;
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    ". . ."
+    ". . .";
+  }
+  li{
+
+    width: 100%;
+    height: 100%;
+    background-color: $accent1;
+    list-style-type: none;
+    border-radius: 15px;
+  }
+
+
+  &-bulle{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+
+    &-content-bottom{
+      height: 100%;
+      margin-top: auto;
+    }
+
+    h3, p{
+      margin: 0;
+
+    }
+    p{
+      margin-block: .5em ;
+    }
+
+  }
+
+}
+
+.couleur {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  //background-color: white;
+}
+
+.options{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+}
+
+
+.selection_couleur{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1em;
+  margin: 0;
+}
+
+
+.couleurs {
+  list-style-type: none;
+  //padding: 2em;
+  //margin: 2em;
+  position: relative;
+  &__item {
+    display: inline-block;
+    input {
+      display: none;
+      &:checked {
+        & + .couleurs__pastille {
+          border: .5em solid;
+          border-color: $secondary;
+          border-radius: 50%;
+        }
+      }
+      &:hover {
+
+        & + .couleurs__pastille {
+          &:after {
+            content: attr(data-couleur);
+            position: absolute;
+            top: -2em;
+            left: 2em;
+          }
+        }
+      }
+    }
+  }
+  &__pastille {
+    display: block;
+    border: .5em solid;
+    border-color: $accent1;
+    border-radius: 50%;
+    &:hover{
+      border: .5em solid;
+      border-color: $secondary;
+      border-radius: 50%;
+    }
+  }
+}
+
+.input_text{
+  padding-block: 1em;
+  padding-inline: .5em;
+  border: none;
+  width: 100%;
+  background-color: $accent1;
+  border-radius: 15px;
+
+  &:focus, :active{
+    outline-color: $primary;
+    background-color: $text;
+    color: black;
+  }
+
+}
+
+.select{
+  padding-block: .5em;
+  padding-inline: .5em;
+  border: .5em solid $accent1;
+  background-color: $accent1;
+  border-radius: 15px;
+}
+
+fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modifierUnItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline: 2em;
+  &--liste{
+    display: flex;
+    flex-direction: column;
+    padding-block: 1em;
+    &:nth-child(1),:nth-child(2){
+      margin-block: 1em;
+    }
+    .select{
+      width: max-content;
+
+      background-color: $accent1;
+
+    }
+  }
+  &--echeance{
+    &:nth-child(1),:nth-child(2){
+      margin-block: 1em;
+    }
+  }
+}
+.titre{
+  display: flex;
+  div{
+    margin-top: auto;
+    margin-bottom: .125em;
+  }
+}

@@ -1,0 +1,14 @@
+header{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2em;
+  padding-inline: 2em;
+  //background-color: #9e61ff;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+}
+

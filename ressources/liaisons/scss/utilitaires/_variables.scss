@@ -1,0 +1,39 @@
+/**
+* @author Olivier Roy & Olivier Lemay // CSFOY
+* @todo Importer la fonte Futura
+* @todo Personnaliser les variables selon les spécifications du guide visuel
+*       Certaines variables devront être définies par une fonction de coloration
+* @todo Compléter selon l'énoncé de l'exercice
+* @todo Utiliser le sélecteur & pour les sélecteurs des différentes couleurs
+*/
+
+/** Polices de caractères **/
+
+@font-face {
+  font-family: Futura, sans-serif;
+  src: 	url('../fonts/Futura.ttc') format('truetype');
+}
+
+$fontePrimaire : Futura, sans-serif;
+$fonteSecondaire : Arial, sans-serif;
+
+/** Palette de couleurs **/
+// Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
+// Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange
+
+/* Couleurs de base */
+$primary: #6622CC;
+$primary50: rgba(102, 34, 204, 0.5);
+$secondary: #9e61ff;
+$accent1: #333333;
+$accent2: #33333380;
+$accent3: #525252;
+$bg: #131313;
+$text: #E5E5E5FF;
+
+/* Autres couleurs */
+$hyperlien: $primary;
+
+
+/** Points de rupture **/
+$desktop : 601px;

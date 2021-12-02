@@ -1,0 +1,16 @@
+/* balises formulaires */
+
+.formulaire {
+
+  &__obligatoire {
+    color: red;
+  }
+  &__erreur {
+    color: red;
+    display: inline-block;
+    font-size: 0.9em;
+    margin: 0.75em auto;
+  }
+}
+
+
